@@ -1,3 +1,4 @@
-/env
+__pycache__/
+env/
 .env
-.mp3
+.mp3s
