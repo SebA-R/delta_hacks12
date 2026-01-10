@@ -1,51 +1,40 @@
-from flask import Flask, request
-from twilio.twiml.voice_response import VoiceResponse, Gather
+import os
+from dotenv import load_dotenv
+from elevenlabs.client import ElevenLabs
 
-app = Flask(__name__)
+load_dotenv()
 
+ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
+AGENT_ID = os.getenv("AGENT_ID")
+AGENT_PHONE_NUMBER_ID = os.getenv("AGENT_PHONE_NUMBER_ID")
+DESTINATION_NUMBER = "+16478088854"
 
-@app.route("/call", methods=["POST"])
-def call():
-    r = VoiceResponse()
+client = ElevenLabs(api_key=ELEVENLABS_API_KEY)
 
-    gather = Gather(
-        num_digits=1,
-        action="/handle",
-        timeout=6
-    )
+# Expanded script to cover all schema requirements
+script = (
+    "Hello! I’m an automated assistant verifying clinic information. "
+    "I have a few quick questions: "
+    "1. Is the clinic open and currently accepting new patients? "
+    "2. How much space or capacity do you have for new patients, and what is the current waitlist time? "
+    "3. What languages are spoken by your staff? "
+    "4. Do you offer same-day or online booking? "
+    "5. Approximately how many doctors work at this location? "
+    "Finally, what are your regular office hours? "
+    "Thank you for your help!"
+)
 
-    gather.say(
-        "Hello. This is an automated verification call."
-        "We are confirming publicly listed clinic information."
-        "Please press 1 if you are accepting new patients."
-        "Press 2 if you are not accepting new patients."
-        "Press 3 if this number is no longer in service."
-    )
+# Initiating the call
+result = client.conversational_ai.twilio.outbound_call(
+    agent_id=AGENT_ID,
+    agent_phone_number_id=AGENT_PHONE_NUMBER_ID,
+    to_number=DESTINATION_NUMBER,
+    # Ensure your Agent's 'First Message' or 'System Prompt' in the dashboard
+    # uses the {{script}} variable to actually say these words.
+    conversation_initiation_client_data={
+        "dynamic_variables": {"script": script}}
+)
 
-    r.append(gather)
-    r.say("No input received. Thank you. Goodbye.")
-    r.hangup()
-
-    return str(r)
-
-
-@app.route("/handle", methods=["POST"])
-def handle():
-    digit = request.values.get("Digits")
-    r = VoiceResponse()
-
-    if digit == "1":
-        r.say("Thank you. We have recorded that you are accepting new patients.")
-    elif digit == "2":
-        r.say("Thank you. We have recorded that you are not accepting new patients.")
-    elif digit == "3":
-        r.say("Thank you. We will update our records.")
-    else:
-        r.say("Invalid input.")
-
-    r.hangup()
-    return str(r)
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
+print(f"✔ Outbound call initiated")
+print(f"Twilio SID: {result.call_sid}")
+print(f"Conversation ID: {result.conversation_id}")
