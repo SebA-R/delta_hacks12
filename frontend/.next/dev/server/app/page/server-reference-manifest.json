@@ -1,0 +1,20 @@
+{
+  "node": {
+    "002883c9a8dee5290f36b6f1380af8a2f650cb8ecf": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/PycharmProjects/pythonProject/deltahacks12/frontend/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/PycharmProjects/pythonProject/deltahacks12/frontend/app/actions/get-maps-key.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getMapsApiKey",
+          "filename": "PycharmProjects/pythonProject/deltahacks12/frontend/app/actions/get-maps-key.ts"
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      },
+      "exportedName": "getMapsApiKey",
+      "filename": "PycharmProjects/pythonProject/deltahacks12/frontend/app/actions/get-maps-key.ts"
+    }
+  },
+  "edge": {}
+}

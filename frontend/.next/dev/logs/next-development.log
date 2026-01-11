@@ -1,0 +1,382 @@
+[00:00:02.066] Server  LOG      ✓ Ready in 1386ms
+[00:00:05.134] Server  LOG      ○ Compiling / ...
+[00:00:07.854] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:08.710] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/PycharmPr...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         suppresshydrationwarning="true"
+-                         data-lt-installed="true"
+                        >
+                  ...
+
+[00:00:08.710] Browser LOG     [v0] Map not ready: {"hasImportLibrary":false,"hasRef":false,"isLoaded":false}
+[00:00:08.710] Browser LOG     [v0] Not ready to update markers
+[00:00:09.653] Browser LOG     [v0] Map not ready: {"hasImportLibrary":false,"hasRef":false,"isLoaded":false}
+[00:00:09.653] Browser LOG     [v0] Not ready to update markers
+[00:00:09.653] Browser ERROR   [v0] Google Maps API key is missing
+[00:00:09.653] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:09.653] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:09.653] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1768134802371}
+[01:14:35.217] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:14:35.551] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/PycharmPr...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         suppresshydrationwarning="true"
+-                         data-lt-installed="true"
+                        >
+                  ...
+
+[01:14:35.551] Browser LOG     [v0] Map not ready: {"hasImportLibrary":false,"hasRef":false,"isLoaded":false}
+[01:14:35.551] Browser LOG     [v0] Not ready to update markers
+[01:14:35.898] Browser LOG     [v0] Map not ready: {"hasImportLibrary":false,"hasRef":false,"isLoaded":false}
+[01:14:35.898] Browser LOG     [v0] Not ready to update markers
+[01:14:35.899] Browser ERROR   [v0] Google Maps API key is missing
+[01:14:35.899] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:14:35.899] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:14:35.899] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1768139269087}
+[01:16:52.630] Server  LOG        Reload env: .env
+[01:16:54.662] Browser LOG     [v0] Map not ready: {"hasImportLibrary":false,"hasRef":false,"isLoaded":false}
+[01:16:54.663] Browser LOG     [v0] Map not ready: {"hasImportLibrary":false,"hasRef":false,"isLoaded":false}
+[01:17:01.219] Server  LOG        Reload env: .env
+[01:17:02.476] Server  LOG      ✓ Compiled in 924ms
+[01:17:03.676] Browser LOG     [v0] Map not ready: {"hasImportLibrary":false,"hasRef":false,"isLoaded":false}
+[01:17:03.678] Browser LOG     [v0] Map not ready: {"hasImportLibrary":false,"hasRef":false,"isLoaded":false}
+[01:17:05.876] Server  LOG        Reload env: .env
+[01:17:05.955] Server  LOG      ✓ Compiled in 16ms
+[01:17:06.661] Browser LOG     [v0] Map not ready: {"hasImportLibrary":false,"hasRef":false,"isLoaded":false}
+[01:17:06.661] Browser LOG     [v0] Map not ready: {"hasImportLibrary":false,"hasRef":false,"isLoaded":false}
+[01:17:13.309] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:17:13.762] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/PycharmPr...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         suppresshydrationwarning="true"
+-                         data-lt-installed="true"
+                        >
+                          ...
+                            <Slot type="button" aria-haspopup="dialog" aria-expanded={false} ...>
+                              <SlotClone type="button" aria-haspopup="dialog" aria-expanded={false} ...>
+                                <Button variant="outline" size="icon" className="flex-shrin..." type="button" ...>
+                                  <button
+                                    data-slot="popover-trigger"
+                                    className={"inline-flex items-center justify-center gap-2 whitespace-nowrap round..."}
+                                    type="button"
+                                    aria-haspopup="dialog"
+                                    aria-expanded={false}
++                                   aria-controls="radix-_R_4mindlb_"
+-                                   aria-controls="radix-_R_iqindlb_"
+                                    data-state="closed"
+                                    onClick={function handleEvent}
+                                    ref={function}
+                                  >
+                  ...
+
+[01:17:13.762] Browser LOG     [v0] Map not ready: {"hasImportLibrary":false,"hasRef":false,"isLoaded":false}
+[01:17:13.762] Browser LOG     [v0] Not ready to update markers
+[01:17:13.762] Browser LOG     [v0] Starting Google Maps load
+[01:17:13.762] Browser LOG     [v0] Map not ready: {"hasImportLibrary":false,"hasRef":false,"isLoaded":false}
+[01:17:13.762] Browser LOG     [v0] Not ready to update markers
+[01:17:13.762] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:17:13.762] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:17:13.762] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1768139426956}
+[01:17:13.920] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[01:17:14.279] Browser LOG     [v0] Google Maps loaded successfully
+[01:17:14.279] Browser LOG     [v0] Initializing map
+[01:17:14.279] Browser LOG     [v0] Not ready to update markers
+[01:17:14.279] Browser LOG     [v0] Map initialized
+[01:17:14.279] Browser LOG     [v0] User marker added
+[01:17:14.279] Browser LOG     [v0] All markers added: 60
+[01:17:14.279] Browser LOG     [v0] Markers updated, selected: none
+[01:17:58.464] Browser LOG     [v0] Initializing map
+[01:17:58.464] Browser LOG     [v0] Not ready to update markers
+[01:17:58.464] Browser LOG     [v0] Map initialized
+[01:17:58.464] Browser LOG     [v0] Markers updated, selected: none
+[01:17:58.464] Browser LOG     [v0] User marker added
+[01:17:58.464] Browser LOG     [v0] All markers added: 60
+[01:17:58.464] Browser LOG     [v0] Markers updated, selected: none
+[01:17:58.464] Browser LOG     [v0] Initializing map
+[01:17:58.464] Browser LOG     [v0] Markers and locations mismatch, skipping update
+[01:17:58.464] Browser LOG     [v0] Not ready to update markers
+[01:17:58.464] Browser LOG     [v0] Map initialized
+[01:17:58.464] Browser LOG     [v0] User marker added
+[01:17:58.464] Browser LOG     [v0] All markers added: 2
+[01:17:58.464] Browser LOG     [v0] Markers updated, selected: none
+[01:17:58.464] Browser LOG     [v0] Initializing map
+[01:17:58.464] Browser LOG     [v0] Markers and locations mismatch, skipping update
+[01:17:58.464] Browser LOG     [v0] Not ready to update markers
+[01:17:58.464] Browser LOG     [v0] Map initialized
+[01:17:58.464] Browser LOG     [v0] User marker added
+[01:17:58.464] Browser LOG     [v0] All markers added: 1
+[01:17:58.464] Browser LOG     [v0] Markers updated, selected: none
+[01:17:59.383] Browser LOG     [v0] Initializing map
+[01:17:59.383] Browser LOG     [v0] Not ready to update markers
+[01:17:59.383] Browser LOG     [v0] Map initialized
+[01:17:59.383] Browser LOG     [v0] Markers updated, selected: none
+[01:17:59.383] Browser LOG     [v0] User marker added
+[01:17:59.383] Browser LOG     [v0] All markers added: 1
+[01:17:59.383] Browser LOG     [v0] Markers updated, selected: none
+[01:17:59.630] Browser LOG     [v0] Initializing map
+[01:17:59.630] Browser LOG     [v0] Not ready to update markers
+[01:17:59.630] Browser LOG     [v0] Map initialized
+[01:17:59.630] Browser LOG     [v0] Markers updated, selected: none
+[01:17:59.631] Browser LOG     [v0] User marker added
+[01:17:59.631] Browser LOG     [v0] All markers added: 1
+[01:17:59.631] Browser LOG     [v0] Markers updated, selected: none
+[01:17:59.860] Browser LOG     [v0] Initializing map
+[01:17:59.861] Browser LOG     [v0] Not ready to update markers
+[01:17:59.861] Browser LOG     [v0] Map initialized
+[01:17:59.861] Browser LOG     [v0] Markers updated, selected: none
+[01:17:59.861] Browser LOG     [v0] User marker added
+[01:17:59.861] Browser LOG     [v0] All markers added: 1
+[01:17:59.861] Browser LOG     [v0] Markers updated, selected: none
+[01:18:00.090] Browser LOG     [v0] Initializing map
+[01:18:00.090] Browser LOG     [v0] Not ready to update markers
+[01:18:00.090] Browser LOG     [v0] Map initialized
+[01:18:00.090] Browser LOG     [v0] Markers updated, selected: none
+[01:18:00.090] Browser LOG     [v0] User marker added
+[01:18:00.090] Browser LOG     [v0] All markers added: 1
+[01:18:00.090] Browser LOG     [v0] Markers updated, selected: none
+[01:18:00.090] Browser LOG     [v0] Initializing map
+[01:18:00.090] Browser LOG     [v0] Not ready to update markers
+[01:18:00.090] Browser LOG     [v0] Map initialized
+[01:18:00.090] Browser LOG     [v0] Markers updated, selected: none
+[01:18:00.090] Browser LOG     [v0] User marker added
+[01:18:00.090] Browser LOG     [v0] All markers added: 1
+[01:18:00.090] Browser LOG     [v0] Markers updated, selected: none
+[01:18:06.089] Browser LOG     [v0] Initializing map
+[01:18:06.089] Browser LOG     [v0] Markers and locations mismatch, skipping update
+[01:18:06.089] Browser LOG     [v0] Not ready to update markers
+[01:18:06.089] Browser LOG     [v0] Map initialized
+[01:18:06.089] Browser LOG     [v0] User marker added
+[01:18:06.089] Browser LOG     [v0] All markers added: 60
+[01:18:06.089] Browser LOG     [v0] Markers updated, selected: none
+[01:18:07.882] Browser LOG     [v0] Initializing map
+[01:18:07.882] Browser LOG     [v0] Markers and locations mismatch, skipping update
+[01:18:07.882] Browser LOG     [v0] Not ready to update markers
+[01:18:07.882] Browser LOG     [v0] Map initialized
+[01:18:07.882] Browser LOG     [v0] User marker added
+[01:18:07.882] Browser LOG     [v0] All markers added: 38
+[01:18:07.882] Browser LOG     [v0] Markers updated, selected: none
+[01:18:07.882] Browser LOG     [v0] Initializing map
+[01:18:07.882] Browser LOG     [v0] Markers and locations mismatch, skipping update
+[01:18:07.882] Browser LOG     [v0] Not ready to update markers
+[01:18:07.882] Browser LOG     [v0] Map initialized
+[01:18:07.882] Browser LOG     [v0] User marker added
+[01:18:07.882] Browser LOG     [v0] All markers added: 2
+[01:18:07.882] Browser LOG     [v0] Markers updated, selected: none
+[01:18:08.587] Browser LOG     [v0] Initializing map
+[01:18:08.587] Browser LOG     [v0] Markers and locations mismatch, skipping update
+[01:18:08.587] Browser LOG     [v0] Not ready to update markers
+[01:18:08.587] Browser LOG     [v0] Map initialized
+[01:18:08.587] Browser LOG     [v0] User marker added
+[01:18:08.587] Browser LOG     [v0] All markers added: 0
+[01:18:08.587] Browser LOG     [v0] Markers updated, selected: none
+[01:18:08.587] Browser LOG     [v0] Initializing map
+[01:18:08.587] Browser LOG     [v0] Map initialized
+[01:18:08.587] Browser LOG     [v0] Markers updated, selected: none
+[01:18:08.587] Browser LOG     [v0] User marker added
+[01:18:08.587] Browser LOG     [v0] All markers added: 0
+[01:18:14.798] Browser LOG     [v0] Initializing map
+[01:18:14.798] Browser LOG     [v0] Map initialized
+[01:18:14.798] Browser LOG     [v0] Markers updated, selected: none
+[01:18:14.798] Browser LOG     [v0] User marker added
+[01:18:14.798] Browser LOG     [v0] All markers added: 0
+[01:18:15.378] Browser LOG     [v0] Initializing map
+[01:18:15.378] Browser LOG     [v0] Map initialized
+[01:18:15.378] Browser LOG     [v0] Markers updated, selected: none
+[01:18:15.378] Browser LOG     [v0] User marker added
+[01:18:15.378] Browser LOG     [v0] All markers added: 0
+[01:18:15.378] Browser LOG     [v0] Initializing map
+[01:18:15.378] Browser LOG     [v0] Map initialized
+[01:18:15.378] Browser LOG     [v0] Markers updated, selected: none
+[01:18:15.378] Browser LOG     [v0] User marker added
+[01:18:15.378] Browser LOG     [v0] All markers added: 0
+[01:18:15.378] Browser LOG     [v0] Initializing map
+[01:18:15.378] Browser LOG     [v0] Map initialized
+[01:18:15.378] Browser LOG     [v0] Markers updated, selected: none
+[01:18:15.378] Browser LOG     [v0] User marker added
+[01:18:15.378] Browser LOG     [v0] All markers added: 0
+[01:18:15.378] Browser LOG     [v0] Initializing map
+[01:18:15.378] Browser LOG     [v0] Map initialized
+[01:18:15.378] Browser LOG     [v0] Markers updated, selected: none
+[01:18:15.378] Browser LOG     [v0] User marker added
+[01:18:15.378] Browser LOG     [v0] All markers added: 0
+[01:18:15.743] Browser LOG     [v0] Initializing map
+[01:18:15.743] Browser LOG     [v0] Map initialized
+[01:18:15.743] Browser LOG     [v0] Markers updated, selected: none
+[01:18:15.743] Browser LOG     [v0] User marker added
+[01:18:15.743] Browser LOG     [v0] All markers added: 0
+[01:18:16.169] Browser LOG     [v0] Initializing map
+[01:18:16.169] Browser LOG     [v0] Map initialized
+[01:18:16.169] Browser LOG     [v0] Markers updated, selected: none
+[01:18:16.169] Browser LOG     [v0] User marker added
+[01:18:16.169] Browser LOG     [v0] All markers added: 0
+[01:18:16.169] Browser LOG     [v0] Initializing map
+[01:18:16.169] Browser LOG     [v0] Map initialized
+[01:18:16.169] Browser LOG     [v0] Markers updated, selected: none
+[01:18:16.169] Browser LOG     [v0] User marker added
+[01:18:16.169] Browser LOG     [v0] All markers added: 0
+[01:18:16.169] Browser LOG     [v0] Initializing map
+[01:18:16.169] Browser LOG     [v0] Map initialized
+[01:18:16.169] Browser LOG     [v0] Markers updated, selected: none
+[01:18:16.169] Browser LOG     [v0] User marker added
+[01:18:16.169] Browser LOG     [v0] All markers added: 0
+[01:18:16.500] Browser LOG     [v0] Initializing map
+[01:18:16.500] Browser LOG     [v0] Map initialized
+[01:18:16.500] Browser LOG     [v0] Markers updated, selected: none
+[01:18:16.500] Browser LOG     [v0] User marker added
+[01:18:16.500] Browser LOG     [v0] All markers added: 0
+[01:18:16.500] Browser LOG     [v0] Initializing map
+[01:18:16.500] Browser LOG     [v0] Map initialized
+[01:18:16.500] Browser LOG     [v0] Markers updated, selected: none
+[01:18:16.500] Browser LOG     [v0] User marker added
+[01:18:16.500] Browser LOG     [v0] All markers added: 0
+[01:18:16.854] Browser LOG     [v0] Initializing map
+[01:18:16.854] Browser LOG     [v0] Map initialized
+[01:18:16.854] Browser LOG     [v0] Markers updated, selected: none
+[01:18:16.854] Browser LOG     [v0] User marker added
+[01:18:16.854] Browser LOG     [v0] All markers added: 0
+[01:18:16.854] Browser LOG     [v0] Initializing map
+[01:18:16.854] Browser LOG     [v0] Map initialized
+[01:18:16.854] Browser LOG     [v0] Markers updated, selected: none
+[01:18:16.854] Browser LOG     [v0] User marker added
+[01:18:16.854] Browser LOG     [v0] All markers added: 0
+[01:18:31.205] Browser LOG     [v0] Initializing map
+[01:18:31.205] Browser LOG     [v0] Markers and locations mismatch, skipping update
+[01:18:31.205] Browser LOG     [v0] Not ready to update markers
+[01:18:31.205] Browser LOG     [v0] Map initialized
+[01:18:31.205] Browser LOG     [v0] User marker added
+[01:18:31.205] Browser LOG     [v0] All markers added: 60
+[01:18:31.205] Browser LOG     [v0] Markers updated, selected: none
+[01:18:56.977] Browser LOG     [v0] Initializing map
+[01:18:56.977] Browser LOG     [v0] Not ready to update markers
+[01:18:56.977] Browser LOG     [v0] Map initialized
+[01:18:56.977] Browser LOG     [v0] Markers updated, selected: NeuPath Centre for Pain & Spine (Formerly CPM)
+[01:18:56.977] Browser LOG     [v0] User marker added
+[01:18:56.977] Browser LOG     [v0] All markers added: 60
+[01:18:56.977] Browser LOG     [v0] Markers updated, selected: NeuPath Centre for Pain & Spine (Formerly CPM)
+[01:18:57.952] Browser LOG     [v0] Initializing map
+[01:18:57.952] Browser LOG     [v0] Not ready to update markers
+[01:18:57.952] Browser LOG     [v0] Map initialized
+[01:18:57.952] Browser LOG     [v0] Markers updated, selected: none
+[01:18:57.952] Browser LOG     [v0] User marker added
+[01:18:57.952] Browser LOG     [v0] All markers added: 60
+[01:18:57.952] Browser LOG     [v0] Markers updated, selected: none
+[01:18:57.952] Browser LOG     [v0] Initializing map
+[01:18:57.952] Browser LOG     [v0] Not ready to update markers
+[01:18:57.952] Browser LOG     [v0] Map initialized
+[01:18:57.952] Browser LOG     [v0] Markers updated, selected: NeuPath Centre for Pain & Spine (Formerly CPM)
+[01:18:57.952] Browser LOG     [v0] User marker added
+[01:18:57.952] Browser LOG     [v0] All markers added: 60
+[01:18:57.952] Browser LOG     [v0] Markers updated, selected: NeuPath Centre for Pain & Spine (Formerly CPM)
+[01:18:59.803] Browser LOG     [v0] Initializing map
+[01:18:59.803] Browser LOG     [v0] Not ready to update markers
+[01:18:59.803] Browser LOG     [v0] Map initialized
+[01:18:59.803] Browser LOG     [v0] Markers updated, selected: Dundurn WalkIn Medical Centre Inc.
+[01:18:59.803] Browser LOG     [v0] User marker added
+[01:18:59.803] Browser LOG     [v0] All markers added: 60
+[01:18:59.803] Browser LOG     [v0] Markers updated, selected: Dundurn WalkIn Medical Centre Inc.
+[01:19:01.553] Browser LOG     [v0] Initializing map
+[01:19:01.553] Browser LOG     [v0] Not ready to update markers
+[01:19:01.553] Browser LOG     [v0] Map initialized
+[01:19:01.553] Browser LOG     [v0] Markers updated, selected: Activa Clinics - Hamilton
+[01:19:01.553] Browser LOG     [v0] User marker added
+[01:19:01.553] Browser LOG     [v0] All markers added: 60
+[01:19:01.553] Browser LOG     [v0] Markers updated, selected: Activa Clinics - Hamilton
+[01:19:02.548] Browser LOG     [v0] Initializing map
+[01:19:02.548] Browser LOG     [v0] Not ready to update markers
+[01:19:02.548] Browser LOG     [v0] Map initialized
+[01:19:02.548] Browser LOG     [v0] Markers updated, selected: none
+[01:19:02.548] Browser LOG     [v0] User marker added
+[01:19:02.548] Browser LOG     [v0] All markers added: 60
+[01:19:02.548] Browser LOG     [v0] Markers updated, selected: none
+[01:19:10.957] Browser LOG     [v0] Initializing map
+[01:19:10.957] Browser LOG     [v0] Not ready to update markers
+[01:19:10.957] Browser LOG     [v0] Map initialized
+[01:19:10.957] Browser LOG     [v0] Markers updated, selected: NeuPath Centre for Pain & Spine (Formerly CPM)
+[01:19:10.957] Browser LOG     [v0] User marker added
+[01:19:10.957] Browser LOG     [v0] All markers added: 60
+[01:19:10.957] Browser LOG     [v0] Markers updated, selected: NeuPath Centre for Pain & Spine (Formerly CPM)
