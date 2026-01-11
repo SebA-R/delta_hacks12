@@ -4,67 +4,105 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated to white background with cool color accents (cyan/teal/blue) */
-  --background: oklch(1 0 0); /* Pure white */
-  --foreground: oklch(0.2 0 0); /* Dark gray for text */
-  --card: oklch(1 0 0); /* White cards */
-  --card-foreground: oklch(0.2 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0 0);
-  --primary: oklch(0.68 0.16 244); /* Deep blue */
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.96 0.01 240); /* Light cool gray */
-  --secondary-foreground: oklch(0.2 0 0);
-  --muted: oklch(0.96 0.01 240);
-  --muted-foreground: oklch(0.5 0.02 240);
-  --accent: oklch(0.55 0.15 220); /* Vibrant cyan-blue accent */
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.88 0.01 240); /* Light cool border */
-  --input: oklch(0.92 0.01 240);
-  --ring: oklch(0.55 0.15 220); /* Cyan ring for focus */
-  --chart-1: oklch(0.55 0.15 220); /* Cyan */
-  --chart-2: oklch(0.65 0.12 200); /* Teal */
-  --chart-3: oklch(0.45 0.18 240); /* Blue */
-  --chart-4: oklch(0.6 0.14 260); /* Sky blue */
-  --chart-5: oklch(0.5 0.16 180); /* Turquoise */
+  /* Updated to new medical-focused cool color palette */
+  /* Brand colors - teal green core */
+  --primary-brand: #0f766e; /* teal green */
+  --primary-light: #5eead4; /* light teal */
+  --primary-dark: #115e59; /* deep teal */
+
+  /* Background and surface */
+  --background: #f9fafb; /* near-white cool gray */
+  --foreground: #0f172a; /* very dark blue-gray for text */
+  --card: #ffffff; /* pure white */
+  --card-foreground: #0f172a;
+  --surface: #e5f4f7; /* very light blue */
+  --muted-panel: #d1fae5; /* pale mint */
+
+  /* Popover */
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+
+  /* Primary (using teal as primary brand) */
+  --primary: #115e59; /* deep teal for headers */
+  --primary-foreground: #ffffff;
+
+  /* Secondary */
+  --secondary: #e5f4f7; /* light blue surface */
+  --secondary-foreground: #0f172a;
+
+  /* Muted */
+  --muted: #e5f4f7;
+  --muted-foreground: #4b5563; /* medium gray for secondary text */
+
+  /* Accent (using primary brand teal) */
+  --accent: #0f766e; /* teal green for highlights */
+  --accent-foreground: #ffffff;
+
+  /* Destructive */
+  --destructive: #ef4444; /* soft red */
+  --destructive-foreground: #ffffff;
+
+  /* Text colors */
+  --text-primary: #0f172a; /* very dark blue-gray */
+  --text-secondary: #4b5563; /* medium gray */
+  --text-disabled: #9ca3af; /* light gray */
+
+  /* Actions and states */
+  --action-primary: #2563eb; /* cool blue CTA */
+  --action-primary-hover: #1d4ed8; /* darker blue hover */
+  --action-secondary: #0ea5e9; /* cyan for secondary actions */
+  --success: #22c55e; /* cool green */
+  --warning: #fbbf24; /* soft amber */
+  --error: #ef4444; /* soft red */
+
+  /* Borders and inputs */
+  --border: #cbd5e1; /* light blue-gray */
+  --input: #cbd5e1;
+  --ring: #38bdf8; /* bright cyan for focus */
+
   --radius: 0.625rem;
-  --sidebar: oklch(0.98 0.01 240);
-  --sidebar-foreground: oklch(0.2 0 0);
-  --sidebar-primary: oklch(0.55 0.15 220);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.96 0.01 240);
-  --sidebar-accent-foreground: oklch(0.2 0 0);
-  --sidebar-border: oklch(0.88 0.01 240);
-  --sidebar-ring: oklch(0.55 0.15 220);
+
+  /* Chart colors - cool palette */
+  --chart-1: #0f766e; /* teal */
+  --chart-2: #0ea5e9; /* cyan */
+  --chart-3: #2563eb; /* blue */
+  --chart-4: #5eead4; /* light teal */
+  --chart-5: #22c55e; /* cool green */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
+  --background: #0f172a;
+  --foreground: #f9fafb;
+  --card: #1e293b;
+  --card-foreground: #f9fafb;
+  --popover: #1e293b;
+  --popover-foreground: #f9fafb;
+  --primary: #0f766e;
+  --primary-foreground: #ffffff;
+  --secondary: #334155;
+  --secondary-foreground: #f9fafb;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --accent: #0f766e;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #334155;
+  --ring: #38bdf8;
+  --chart-1: #0f766e;
+  --chart-2: #0ea5e9;
+  --chart-3: #2563eb;
+  --chart-4: #5eead4;
+  --chart-5: #22c55e;
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);

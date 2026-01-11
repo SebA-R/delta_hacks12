@@ -28,7 +28,7 @@
       "lat": 43.358031,
       "lng": -79.79248369999999,
       "place_id": "ChIJpejH2rZhK4gRvyI2OIT2AdU",
-      "business_status": "OPERATIONAL",
+      "business_status": "UNOPERATIONAL",
       "types": [
         "spa",
         "doctor",

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, useCallback } from "react"
 import { getMapsApiKey } from "@/app/actions/get-maps-key"
 
 interface Location {
@@ -110,6 +110,14 @@ export default function GoogleMapComponent({
   const userMarkerRef = useRef<any | null>(null)
   const [isLoaded, setIsLoaded] = useState(false)
   const [loadError, setLoadError] = useState<string | null>(null)
+  const [markersReady, setMarkersReady] = useState(false)
+
+  const handleMarkerClick = useCallback(
+    (location: Location) => {
+      onMarkerClick(location)
+    },
+    [onMarkerClick],
+  )
 
   useEffect(() => {
     const initializeMap = async () => {
@@ -161,7 +169,6 @@ export default function GoogleMapComponent({
         mapInstanceRef.current = map
         console.log("[v0] Map initialized")
 
-        // Add user location marker
         if (userLocation) {
           const { AdvancedMarkerElement, PinElement } = (await window.google.maps.importLibrary("marker")) as any
 
@@ -181,7 +188,6 @@ export default function GoogleMapComponent({
           console.log("[v0] User marker added")
         }
 
-        // Add location markers
         const { AdvancedMarkerElement, PinElement } = (await window.google.maps.importLibrary("marker")) as any
 
         markersRef.current = locations.map((location) => {
@@ -201,12 +207,13 @@ export default function GoogleMapComponent({
           })
 
           marker.addListener("click", () => {
-            onMarkerClick(location)
+            handleMarkerClick(location)
           })
 
           return marker
         })
         console.log("[v0] All markers added:", markersRef.current.length)
+        setMarkersReady(true)
       } catch (error) {
         console.error("[v0] Error loading map:", error)
         setLoadError("Error initializing map")
@@ -216,14 +223,17 @@ export default function GoogleMapComponent({
     loadMap()
 
     return () => {
+      setMarkersReady(false)
       markersRef.current.forEach((marker) => (marker.map = null))
       if (userMarkerRef.current) userMarkerRef.current.map = null
     }
-  }, [locations, userLocation, isLoaded, onMarkerClick])
+  }, [locations, userLocation, isLoaded, handleMarkerClick])
 
-  // Update marker highlights when selection changes
   useEffect(() => {
-    if (!mapInstanceRef.current || !isLoaded || !window.google?.maps?.importLibrary) return
+    if (!mapInstanceRef.current || !isLoaded || !markersReady || !window.google?.maps?.importLibrary) {
+      console.log("[v0] Not ready to update markers")
+      return
+    }
 
     const updateMarkers = async () => {
       try {
@@ -255,20 +265,21 @@ export default function GoogleMapComponent({
           marker.content = pin.element
         })
 
-        // Pan to selected location
         if (selectedLocation) {
           mapInstanceRef.current?.panTo({
             lat: selectedLocation.lat,
             lng: selectedLocation.lng,
           })
         }
+
+        console.log("[v0] Markers updated, selected:", selectedLocation?.name || "none")
       } catch (error) {
         console.error("Error updating markers:", error)
       }
     }
 
     updateMarkers()
-  }, [selectedLocation, locations, isLoaded])
+  }, [selectedLocation, locations, isLoaded, markersReady])
 
   if (loadError) {
     return (

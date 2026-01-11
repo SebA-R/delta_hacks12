@@ -6,11 +6,10 @@ import { Card } from "@/components/ui/card"
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <header className="border-b bg-primary shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-primary-foreground">ConnectMD</h1>
+            <h1 className="text-2xl font-bold text-primary-foreground">Find M<span className="text-xl text-primary-foreground/60">y</span> D<span className="text-xl text-primary-foreground/60">octor</span></h1>
             <Link href="/">
               <Button variant="secondary" size="sm" className="gap-2">
                 <ArrowLeft className="h-4 w-4" />
@@ -33,7 +32,7 @@ export default function AboutPage() {
         </div>
 
         {/* Abstract Section */}
-        <Card className="mb-8 p-8 bg-white shadow-md">
+        <Card className="mb-8 p-8 bg-card shadow-md border-border">
           <div className="flex items-start gap-4 mb-4">
             <div className="p-3 rounded-lg bg-accent/10">
               <Target className="h-6 w-6 text-accent" />
@@ -67,10 +66,10 @@ export default function AboutPage() {
         </Card>
 
         {/* Problem Statement */}
-        <Card className="mb-8 p-8 bg-white shadow-md">
+        <Card className="mb-8 p-8 bg-card shadow-md border-border">
           <div className="flex items-start gap-4 mb-4">
-            <div className="p-3 rounded-lg bg-chart-2/10">
-              <Users className="h-6 w-6 text-chart-2" />
+            <div className="p-3 rounded-lg" style={{ backgroundColor: "var(--primary-light)", opacity: 0.1 }}>
+              <Users className="h-6 w-6" style={{ color: "var(--primary-brand)" }} />
             </div>
             <div>
               <h3 className="text-2xl font-semibold text-foreground mb-4">The Problem We're Solving</h3>
@@ -109,10 +108,10 @@ export default function AboutPage() {
         </Card>
 
         {/* How It Works */}
-        <Card className="mb-8 p-8 bg-white shadow-md">
+        <Card className="mb-8 p-8 bg-card shadow-md border-border">
           <div className="flex items-start gap-4 mb-6">
-            <div className="p-3 rounded-lg bg-chart-3/10">
-              <Database className="h-6 w-6 text-chart-3" />
+            <div className="p-3 rounded-lg" style={{ backgroundColor: "var(--primary)", opacity: 0.1 }}>
+              <Database className="h-6 w-6" style={{ color: "var(--primary-foreground)" }} />
             </div>
             <div>
               <h3 className="text-2xl font-semibold text-foreground mb-4">How the System Works</h3>
@@ -173,9 +172,9 @@ export default function AboutPage() {
         </Card>
 
         {/* Impact Section */}
-        <Card className="p-8 bg-gradient-to-br from-accent/5 to-chart-2/5 border-accent/20">
+        <Card className="p-8 bg-gradient-to-br from-accent/5 to-secondary border-accent/20">
           <div className="flex items-start gap-4 mb-4">
-            <div className="p-3 rounded-lg bg-white">
+            <div className="p-3 rounded-lg bg-card">
               <Phone className="h-6 w-6 text-accent" />
             </div>
             <div>
@@ -188,15 +187,17 @@ export default function AboutPage() {
               <span className="font-semibold">scalable and respectful approach</span> to family doctor discovery.
             </p>
             <div className="grid gap-4 md:grid-cols-2">
-              <div className="bg-white/80 rounded-lg p-4">
+              <div className="bg-card/80 rounded-lg p-4 border border-border">
                 <h4 className="font-semibold text-accent mb-2">For Patients</h4>
                 <p className="text-sm text-muted-foreground">
                   A clear, up-to-date interface that eliminates the need for repetitive phone calls and reduces the time
                   to find care.
                 </p>
               </div>
-              <div className="bg-white/80 rounded-lg p-4">
-                <h4 className="font-semibold text-chart-2 mb-2">For Clinics</h4>
+              <div className="bg-card/80 rounded-lg p-4 border border-border">
+                <h4 className="font-semibold mb-2" style={{ color: "var(--primary-brand)" }}>
+                  For Clinics
+                </h4>
                 <p className="text-sm text-muted-foreground">
                   Reduced administrative burden from repetitive inquiries, allowing staff to focus on patient care.
                 </p>
@@ -205,10 +206,9 @@ export default function AboutPage() {
           </div>
         </Card>
 
-        {/* CTA */}
         <div className="mt-12 text-center">
           <Link href="/">
-            <Button size="lg" className="gap-2">
+            <Button size="lg" className="gap-2" style={{ backgroundColor: "var(--action-primary)" }}>
               Start Searching for Doctors
             </Button>
           </Link>
